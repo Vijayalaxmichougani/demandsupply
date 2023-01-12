@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Demand display</title>
+    </head>
+<body>
+    <h1>RESOURCE DEMAND</h1>
+    <br>
+    <div class="divScrollbar">
+        <style>
+            .divScrollbar {
+                background-color: powderblue;
+                overflow: auto;
+                height: 200px;
+                width: 96%;
+                padding: 20px;
+            }
+        </style>
+        {{ df|safe }}
+    </div>
+    <br>
+<!--     
+<a href="{% url 'supply' %}">
+Select RESOURCE <select id="mySelect" onchange="my()">
+     <option value="1">1
+     <option value="2">2
+     <option value="3">3
+     <option value="4">4
+   </select>    <button>Submit</button></a>
+      </body> -->
+
+<form action="/supply">
+    Select Resource<br> <input type="number" name="demand">
+</form>
+
+    </body>
+
+</html>

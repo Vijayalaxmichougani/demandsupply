@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get Selected Text of SELECT Element using JavaScript</title>
+
+  <style>
+    * { font-family: 'Segoe UI' ;}
+    select { font-size: 15px; } p { padding: 10px 0;}
+  </style>
+</head>
+<body>
+ 
+  
+  <select id="sel" onchange="selectText(this)">
+    <option value="">-- Select --</option>
+    <option value="001">first supply</option>
+    <option value="002">second supply</option>
+    <option value="003">third supply</option>
+  </select>
+    
+  <p id='msg'></p>
+  
+  <!-- <p>
+    <a href='https://www.encodedna.com/javascript/get-select-dropdown-list-selected-texts-using-javascript-and-jquery.htm' target='_blank'>Go to tutorial.</a>
+  </p> -->
+</body>
+<script>
+    let selectText = (ele) => {
+    	let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+</html>
