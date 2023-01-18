@@ -85,7 +85,7 @@ def one(request):
     Demand = input("Enter a demand:")
     # params = int(request.GET.get('demand'))
     # response = requests.get('http://10.11.52.113:2000/',json = params)
-    response = requests.get(URL + Demand)
+    response = requests.get(URL , Demand)
     r3 = response.json()
     supply_df = pd.DataFrame.from_dict(r3)
     print(supply_df)
@@ -95,7 +95,6 @@ def one(request):
     return render(request,'one.html',context)
 
 #     return alert('demand': + 'number')
-
 # {
 #     "demand" : "$input.params('demand')"
 # }
