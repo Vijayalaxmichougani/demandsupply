@@ -40,18 +40,32 @@ def supply(request):
         }
     return render(request,'supply.html',context)
 
-def one(request):
-    params = {}
-    response = requests.get('http://10.11.52.113:2000/',json = params)
-    r3 = response.json()
-    dict = pd.json_normalize(response)
-    print(dict)
-    supply_df = pd.DataFrame.from_dict(r3)
-    print(supply_df)
-    context = {
-         'df' : supply_df.to_html()
-        }
-    return render(request,'one.html',context)
+# def one(request):
+#     URL = "http://10.11.52.113:2000/"
+#     Demand = input("Enter a demand:")
+#     # params = int(request.GET.get('demand'))
+#     # response = requests.get('http://10.11.52.113:2000/',json = params)
+#     data = requests.get(URL + Demand)
+#     data = data.json()
+#     try:
+#         data_json = json.loads(data)
+#         print(data_json)
+
+#     except json.JSONDecodeError:
+#         print("Empty response ")
+#     supply_df = pd.DataFrame.from_dict(data_json)
+#     print(supply_df)
+#     context = {
+#          'df' : supply_df.to_html()
+#         }
+#     return render(requests.request,'one.html',context)
+# if __name__ == "__one__":
+#     one()
+
+    # r3 = response.json()
+    # dict = pd.json_normalize(response)
+    # print(dict)
+   
 
 def index(request):
     return render(request, 'a.html')
@@ -66,8 +80,20 @@ def three(request):
 
 # def alert_data(demand):
 # {
+def one(request):
+    URL = "http://10.11.52.113:2000/"
+    Demand = input("Enter a demand:")
+    # params = int(request.GET.get('demand'))
+    # response = requests.get('http://10.11.52.113:2000/',json = params)
+    response = requests.get(URL + Demand)
+    r3 = response.json()
+    supply_df = pd.DataFrame.from_dict(r3)
+    print(supply_df)
+    context = {
+         'df' : supply_df.to_html()
+        }
+    return render(request,'one.html',context)
 
-# }
 #     return alert('demand': + 'number')
 
 # {

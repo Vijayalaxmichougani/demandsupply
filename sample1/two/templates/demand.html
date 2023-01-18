@@ -16,6 +16,8 @@
             }
         </style>
         {{ df|safe }}
+
+        {{ df1|safe }}
     </div>
     <br>
 <!--     
@@ -28,9 +30,16 @@ Select RESOURCE <select id="mySelect" onchange="my()">
    </select>    <button>Submit</button></a>
       </body> -->
 
-<form action="/supply">
+      <form action="/one">
+        Enter a demand : <input type="number" name="Enter a demand"><br>
+           <input type="submit">
+    
+    </form>
+
+<!-- <form action="/supply">
     Select Resource<br> <input type="number" name="demand">
-</form>
+    <input type="submit">
+</form> -->
 
     </body>
 
