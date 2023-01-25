@@ -22,6 +22,9 @@ from two.views import ul
 from two.views import one
 from two.views import two
 from two.views import three
+from two.views import final
+from two.views import final1
+from two.views import usersform
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,5 +35,8 @@ urlpatterns = [
     path("one/", one, name="one"),
     path("two/", two, name="two"),
     path("three/", three, name="three"),
+    path("final/", final, name="final"),
+    path("final1/", final1, name="final1"),
+    path("usersform/", usersform, name="usersform"),
 
 ]

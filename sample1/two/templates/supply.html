@@ -5,7 +5,12 @@
 
 <body>
     <h1>SUPPLY</h1>
-    <br>
+    <form action="/supply">
+        RESOURCE DEMAND : <input type="text" name="num1">
+      <input type="submit">
+        </form>
+    Selected demand :{{d}} <br>
+  
     <div class="divScrollbar">
         <style>
             .divScrollbar {
@@ -16,6 +21,7 @@
                 padding: 20px;
             }
         </style>
+        
         {{ df|safe }}
     </div>
     <br>

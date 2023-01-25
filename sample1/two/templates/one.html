@@ -2,47 +2,55 @@
     <head>
         <title>supply display</title>
     </head>
-
-<body>
-   
-<!-- <form action ="/supply" autocomplete="off"></form>
-Select RESOURCE <select id="mySelect" onchange="myFunction()">
-     <option value="1">1
-     <option value="2">2
-     <option value="3">3
-     <option value="4">4
-   </select>
-     
-   <p id="demo"></p> -->
-   
-   <!-- <script>
-   function myFunction() {
-     var Resource_demand = document.getElementById("mySelect").value;
-     document.getElementById("demo").innerHTML = "You selected: " + Resource_demand;
-   }
-   </script> -->
-
-
-
-<!-- <form action="/one">
-    Enter Resource_demand : <input type="text" name='Resource_demand'><br>
-       <input type="submit"> -->
-
-</form>
-
-var demand = document.getElementById("demand")
-var jsonBtn = document.getElementById("jsonBtn")
-
-jsonBtn.addEventListener("click", function()){
-    var data = {
-        "demand" :demand.value
-    }
-    jsonText.innerHTML = JSON.stringfy(data)
-}
-</body>
 <body>
     <h1>SUPPLY</h1>
+    <!-- <div>demand:<br><span id="demand"></span></div>
+    <script>
+        const demand = localStorage.getItem('demand');
+        const myJSON = JSON.stringify(demand);
+        document.getElementById('demand').innerHTML = myJSON;
+
+    </script>
     <br>
+    <body>
+        <input type="number" name="demand"> -->
+        
+      <form action="one/">
+         <input type="number" name="demand">
+      </form>
+    </body>
+    <html>
+    <head>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+         crossorigin="anonymous"></script>
+        <body>
+            <form id="formid">
+                <label>Demand</label>
+                <input type="number" class="demand" id="demand"><br>
+
+                <input type="button" id="submit" onclick="submitData()" value="SEND">
+                <div id="showJson"></div>
+            </form>
+           <script>
+            function submitData(){
+                var demand=$('#demand').val();
+
+                jsonObject={
+                    "Demand":null
+                } -->
+                <!-- jsonObject.Demand=demand;
+
+                var strJSON= JSON.stringify(jsonObject);
+                var parseJSON= JSON.parse(strJSON);
+                // document.write(str);
+                document.getElementById('showJson').innerHTML=strJSON;
+            }
+           </script> -->
+
+        </body>
+    </head>
+</html>
     <div class="divScrollbar">
         <style>
             .divScrollbar {
